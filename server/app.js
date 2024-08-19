@@ -3,22 +3,16 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 // Load environment variables from .env file
 require('dotenv').config();
+const connectDB = require('./config/db.js');  // DataBsase Connection
 const itemRoutes = require('./routes/itemRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
 const recipeRoutes = require('./routes/recipeRoutes.js');
+const errorHandler = require('./middlewares/errorHandler.js');
+
 const app = express();
 const port = 5000;
 
-
-
-// use environment variables for mongoDB URI
-const mongoURI = process.env.MONGODB_URI;
-
-// Connect to MongoDB
-
-mongoose.connect(mongoURI)
- .then(()=> console.log('Connected to MongoDB'))
- .catch(err=> console.log('Failed to connect to MongoDB: ', err));
+connectDB();  // Connect to MongoDB
 
 
 app.use(cors());
@@ -33,6 +27,9 @@ app.get('/api/greetings', (req, res)=> {
 app.use('/api/items', itemRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api', recipeRoutes);
+
+// Error handlers middleware
+app.use(errorHandler);
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);

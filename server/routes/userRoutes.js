@@ -1,18 +1,31 @@
 const express = require('express');
 const router = express.Router();
+const userController = require('../controllers/userController.js');
 const User = require('../models/userModel');
 
 
-// Get all users
-router.get('/', async(req, res)=>{
-    try {
-        const users = await User.find();
-        res.json(users);
-    }
-    catch(err){
-        res.status(500).json({message: err.message});
-    }
-});
+
+
+//Get all use
+
+router.get('/', userController.getAllUsers);
+
+// Create User
+
+router.post('/createUser', userController.createUser);
+
+// Update User
+
+router.patch('/updateUser/:id', userController.updateUser);
+
+// Delete User
+
+router.delete('/deleteUser', userController.deleteUser);
+
+
+
+
+
 
 
 // Create a new user
