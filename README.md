@@ -1,5 +1,3 @@
-
-```markdown
 # Flavorly
 
 ![React](https://img.shields.io/badge/React-17.0.2-blue)
@@ -54,7 +52,6 @@ To get a local copy up and running, follow these simple steps.
 1. Clone the repo:
    ```sh
    git clone https://github.com/RahulRoyBXT/Flavorly.git
-   ```
 2. Install NPM packages for both frontend and backend:
    ```sh
    cd Flavorly/frontend
