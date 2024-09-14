@@ -1,3 +1,5 @@
+
+```markdown
 # Flavorly
 
 ![React](https://img.shields.io/badge/React-17.0.2-blue)
@@ -52,3 +54,42 @@ To get a local copy up and running, follow these simple steps.
 1. Clone the repo:
    ```sh
    git clone https://github.com/RahulRoyBXT/Flavorly.git
+   ```
+2. Install NPM packages for both frontend and backend:
+   ```sh
+   cd Flavorly/frontend
+   npm install
+   cd ../backend
+   npm install
+   ```
+
+### Usage
+
+1. Start the backend server:
+   ```sh
+   cd backend
+   npm start
+   ```
+2. Start the frontend development server:
+   ```sh
+   cd frontend
+   npm start
+   ```
+3. Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+## Contact
+
+- **Rahul Roy** - rahul.roybak@gmail.com
+- Project Link: [https://github.com/RahulRoyBXT/Flavorly](https://github.com/RahulRoyBXT/Flavorly)
+```
